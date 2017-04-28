@@ -25,6 +25,14 @@
                 <input class="input" type="password" name="password" placeholder="Your password" required ngModel autocomplete="off">
               </div>
               <div class="control">
+                <label class="label">{{'Language'|translate}}</label>
+                 <span class="select" style="width:100%;">
+                    <select name="language"  (change)="onChangeLanguage(f.value.language)" [(ngModel)]="language" style="width:100%;">
+                      <option *ngFor="let language of languages" [ngValue]="language.value">{{language.name}}</option>
+                    </select>
+                </span>
+              </div>
+              <div class="control">
                 <button class="button is-primary is-fullwidth" type="submit">{{'Submit'|translate}}</button>
               </div>
             </form>
