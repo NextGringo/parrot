@@ -11,8 +11,8 @@ export class AppComponent implements OnInit {
   title = 'Parrot';
 
   constructor(private router: Router, translate: TranslateService) {
-    translate.setDefaultLang('zh-CN');
-    translate.use('zh-CN');
+    translate.setDefaultLang('en-US');
+    translate.use('en-US');
   }
 
   ngOnInit() { }
